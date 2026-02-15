@@ -4,7 +4,7 @@ This directory contains a modular backend scaffold with:
 
 - `auth`: JWT/session issuance, refresh, password reset, and optional club SSO initiation.
 - `clubs`: tenant model and employee membership endpoints.
-- `bookings`: booking request/approval/rejection lifecycle plus realtime availability/holds APIs.
+- `bookings`: booking request/approval/rejection lifecycle.
 - `analytics`: aggregated metrics endpoints.
 
 ## Versioned interfaces
@@ -33,11 +33,3 @@ Relational schema is defined in `db/schema.sql` for:
 - `users`
 - `employee_roles`
 - `payments`
-
-Realtime availability support adds:
-
-- `section_availability_snapshots`
-- `section_holds`
-- `availability_outbox`
-
-See `realtime-section-availability.md` for the assumptions and API surface used by the scaffold.

@@ -7,13 +7,8 @@ export interface RestEndpoint {
   handler: (req: RequestLike) => unknown;
 }
 
-export interface RestMatch {
-  endpoint: RestEndpoint;
-  params: Record<string, string>;
-}
-
 export interface GraphQLOperation {
-  type: 'Query' | 'Mutation' | 'Subscription';
+  type: 'Query' | 'Mutation';
   field: string;
   protected: boolean;
   resolve: (req: RequestLike, args: Record<string, unknown>) => unknown;
